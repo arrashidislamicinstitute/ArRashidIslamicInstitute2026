@@ -1,0 +1,518 @@
+```html
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আর-রশিদ ইসলামিক ইনস্টিটিউট | ফি ও সুবিধাসমূহ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --islamic-primary: #0a7f3f;
+            --islamic-accent: #fbbf24;
+        }
+
+        body { 
+            font-family: 'Hind Siliguri', sans-serif; 
+            scroll-behavior: smooth;
+        }
+
+        .bg-islamic { background-color: var(--islamic-primary); }
+        .text-islamic { color: var(--islamic-primary); }
+        
+        .btn-hover {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-hover:active {
+            transform: scale(0.96);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+        .service-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 14px 18px;
+            background-color: #f8fafc;
+            border: 2px solid transparent;
+            border-radius: 16px;
+            outline: none;
+            transition: all 0.2s;
+        }
+        .form-input:focus {
+            border-color: var(--islamic-primary);
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(10, 127, 63, 0.1);
+        }
+
+        .loader {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #FFF;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            animation: rotation 1s linear infinite;
+        }
+        @keyframes rotation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .fee-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            padding: 20px;
+            border-left: 4px solid var(--islamic-primary);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- কুইক কন্টাক্ট -->
+    <div class="bg-islamic text-white py-2 text-[10px] md:text-xs">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> চেইন্দা লাহারপাড়া, দক্ষিণ মিঠাছড়ি, রামু, কক্সবাজার</span>
+            <div class="flex space-x-4">
+                <a href="tel:01893368909"><i class="fas fa-phone-alt"></i> ০১৮৯৩-৩৬৮৯০৯</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- নেভিগেশন বার -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-islamic rounded-xl flex items-center justify-center text-white mr-3">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div>
+                    <h1 class="text-base md:text-xl font-bold text-islamic">আর-রশিদ ইসলামিক ইনস্টিটিউট</h1>
+                    <p class="text-[9px] md:text-[11px] text-gray-400 font-bold uppercase tracking-tighter">ক্বিরাত, কায়দা ও নাজেরা বিভাগ</p>
+                </div>
+            </div>
+            <div class="hidden lg:flex space-x-6 text-sm font-bold">
+                <a href="#services" class="hover:text-islamic">বিভাগসমূহ</a>
+                <a href="#facilities" class="hover:text-islamic">সুবিধাসমূহ</a>
+                <a href="#fees" class="hover:text-islamic">ফী সমূহ</a>
+                <a href="#admission" class="hover:text-islamic">ভর্তি ফরম</a>
+                <a href="#admin" class="text-gray-300">লগইন</a>
+            </div>
+            <a href="https://wa.me/8801893368909" class="bg-green-500 text-white px-4 py-2 rounded-full text-xs font-bold flex items-center btn-hover">
+                <i class="fab fa-whatsapp mr-2 text-base"></i> চ্যাট করুন
+            </a>
+        </div>
+    </nav>
+
+    <!-- হিরো সেকশন -->
+    <header class="bg-islamic text-white py-16 text-center relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black mb-4">শুদ্ধ ও সুললিত কুরআন তিলাওয়াত</h2>
+            <p class="text-sm md:text-lg opacity-80 max-w-xl mx-auto mb-8 font-light">আমাদের ক্বিরাত ও নাজেরা বিভাগে আপনার সন্তানকে আন্তর্জাতিক মানের উচ্চারণ ও শৈল্পিক তিলাওয়াত শেখান।</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#admission" class="bg-yellow-400 text-slate-900 px-8 py-3 rounded-2xl font-bold btn-hover shadow-lg">ভর্তি আবেদন</a>
+                <a href="#fees" class="bg-white/10 border border-white/20 px-8 py-3 rounded-2xl font-bold btn-hover">ফি তালিকা</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- বিভাগ সেকশন -->
+        <section id="services" class="mb-20">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold">আমাদের বিশেষ বিভাগসমূহ</h3>
+                <div class="w-12 h-1 bg-islamic mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- ক্বিরাত বিভাগ -->
+                <div class="service-card border-t-4 border-indigo-500">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">ক্বিরাত বিভাগ (Artistic Recitation)</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">সুললিত কণ্ঠে ও শৈল্পিক ভঙ্গিতে কুরআন তিলাওয়াতের জন্য বিশেষ প্রশিক্ষণ বিভাগ। আন্তর্জাতিক ক্বারিদের অনুকরণে প্রশিক্ষণের ব্যবস্থা।</p>
+                </div>
+                <!-- আধুনিক কায়দা -->
+                <div class="service-card border-t-4 border-emerald-500">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-spell-check"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">আধুনিক কায়দা বিভাগ</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">খুব অল্প সময়ে খেলার ছলে ও আধুনিক পদ্ধতিতে মাখরাজ ও তাজউইদসহ হরফ চেনা ও পড়ার বিশেষ ব্যবস্থা।</p>
+                </div>
+                <!-- নাজেরা বিভাগ -->
+                <div class="service-card border-t-4 border-amber-500">
+                    <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mb-4 text-xl">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h4 class="text-lg font-bold mb-2">নাজেরা বিভাগ</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">শুদ্ধ উচ্চারণে সাবলীলভাবে কুরআন তিলাওয়াত শেখার বিশেষ বিভাগ। যেখানে তাজউইদের নিয়মাবলী হাতে-কলমে শেখানো হয়।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ফেসিলিটি বা সুবিধাসমূহ -->
+        <section id="facilities" class="mb-20 bg-white rounded-[3rem] p-8 md:p-12 shadow-sm border border-slate-100">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold">আমাদের বিশেষ সুবিধাসমূহ</h3>
+                <p class="text-sm text-slate-500 mt-2">আপনার সন্তানের সুন্দর ভবিষ্যতের জন্য আমরা প্রতিশ্রুতিবদ্ধ</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">নিরাপদ পরিবেশ</h5>
+                    <p class="text-xs text-slate-500">সম্পূর্ণ সিসিটিভি নিয়ন্ত্রিত ও নিরাপদ ক্যাম্পাস।</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">উন্নত খাবার</h5>
+                    <p class="text-xs text-slate-500">আবাসিক শিক্ষার্থীদের জন্য স্বাস্থ্যসম্মত ও পুষ্টিকর খাবার।</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">আধুনিক কারিকুলাম</h5>
+                    <p class="text-xs text-slate-500">দ্বীনি শিক্ষার পাশাপাশি আধুনিক সাধারণ শিক্ষার সমন্বয়।</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h5 class="font-bold mb-2">অভিজ্ঞ শিক্ষক</h5>
+                    <p class="text-xs text-slate-500">দক্ষ ও অভিজ্ঞ শিক্ষক মণ্ডলী দ্বারা পাঠদান।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ফী সমূহ (Fees) -->
+        <section id="fees" class="mb-20">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold">ফী ও মাসিক বেতন</h3>
+                <div class="w-12 h-1 bg-islamic mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- আবাসিক ফী -->
+                <div class="fee-card">
+                    <h4 class="font-bold text-islamic text-lg mb-4 flex items-center">
+                        <i class="fas fa-home mr-2"></i> আবাসিক শাখা
+                    </h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between border-b border-dashed pb-2">
+                            <span>ভর্তি ফি</span>
+                            <span class="font-bold">৳ ২,৫০০</span>
+                        </div>
+                        <div class="flex justify-between border-b border-dashed pb-2">
+                            <span>মাসিক বেতন</span>
+                            <span class="font-bold text-green-600">৳ ৩,৫০০</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 italic">* এর মধ্যে থাকা ও খাওয়া অন্তর্ভুক্ত।</p>
+                    </div>
+                </div>
+                <!-- অনাবাসিক ফী -->
+                <div class="fee-card">
+                    <h4 class="font-bold text-blue-600 text-lg mb-4 flex items-center">
+                        <i class="fas fa-school mr-2"></i> অনাবাসিক শাখা
+                    </h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between border-b border-dashed pb-2">
+                            <span>ভর্তি ফি</span>
+                            <span class="font-bold">৳ ১,৫০০</span>
+                        </div>
+                        <div class="flex justify-between border-b border-dashed pb-2">
+                            <span>মাসিক বেতন</span>
+                            <span class="font-bold text-blue-600">৳ ১,০০০</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 italic">* শুধুমাত্র শিক্ষা ও আনুষঙ্গিক খরচ।</p>
+                    </div>
+                </div>
+                <!-- ডে কেয়ার ফী -->
+                <div class="fee-card">
+                    <h4 class="font-bold text-rose-500 text-lg mb-4 flex items-center">
+                        <i class="fas fa-child mr-2"></i> ডে কেয়ার শাখা
+                    </h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between border-b border-dashed pb-2">
+                            <span>ভর্তি ফি</span>
+                            <span class="font-bold">৳ ২,০০০</span>
+                        </div>
+                        <div class="flex justify-between border-b border-dashed pb-2">
+                            <span>মাসিক বেতন</span>
+                            <span class="font-bold text-rose-500">৳ ২,০০০</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 italic">* সকাল ৮টা হতে বিকাল ৫টা পর্যন্ত।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ভর্তি ফরম -->
+        <section id="admission" class="max-w-2xl mx-auto mb-20 scroll-mt-24">
+            <div class="bg-white rounded-[2.5rem] shadow-xl p-8 md:p-10 border border-slate-100">
+                <h3 class="text-2xl font-bold text-center mb-8">অনলাইন ভর্তি আবেদন</h3>
+                <form id="admissionForm" class="space-y-5">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-400 uppercase ml-1">ছাত্রীর নাম</label>
+                        <input type="text" id="sName" required class="form-input" placeholder="আবেদনকারীর নাম">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-slate-400 uppercase ml-1">অভিভাবকের নাম</label>
+                            <input type="text" id="gName" required class="form-input" placeholder="পিতার নাম">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-slate-400 uppercase ml-1">মোবাইল নম্বর</label>
+                            <input type="tel" id="phone" required class="form-input" placeholder="০১৮XXXXXXXX">
+                        </div>
+                    </div>
+
+                    <div class="p-5 bg-slate-50 rounded-2xl space-y-4 border border-slate-100">
+                        <p class="text-sm font-bold text-islamic border-b pb-2">শিক্ষার তথ্য</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase ml-1">বিভাগ নির্বাচন করুন</label>
+                                <select id="dept" class="form-input bg-white appearance-none">
+                                    <option>ক্বিরাত বিভাগ</option>
+                                    <option>আধুনিক কায়দা বিভাগ</option>
+                                    <option>নাজেরা বিভাগ</option>
+                                    <option>হিফজুল কুরআন</option>
+                                    <option>নূরানী শাখা</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase ml-1">পছন্দের সার্ভিস</label>
+                                <select id="serviceType" class="form-input bg-white appearance-none">
+                                    <option>আবাসিক (Residential)</option>
+                                    <option>অনাবাসিক (Non-Residential)</option>
+                                    <option>ডে কেয়ার (Day Care)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase ml-1">পূর্বের ক্লাস</label>
+                                <input type="text" id="prevClass" class="form-input bg-white" placeholder="যেমন: ১য় শ্রেণী">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-[10px] font-bold text-slate-400 uppercase ml-1">পূর্বের প্রতিষ্ঠান</label>
+                                <input type="text" id="prevSchool" class="form-input bg-white" placeholder="স্কুল/মাদরাসার নাম">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-slate-400 uppercase ml-1">ঠিকানা</label>
+                        <textarea id="addr" required class="form-input h-24" placeholder="গ্রাম, ইউনিয়ন, উপজেলা..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="w-full bg-islamic text-white py-4 rounded-2xl font-bold text-lg btn-hover shadow-lg flex justify-center items-center">
+                        <span id="btnText">আবেদন জমা দিন</span>
+                        <div id="btnLoader" class="loader ml-3 hidden"></div>
+                    </button>
+                </form>
+                <div id="msgBox" class="mt-4 p-4 rounded-xl text-center hidden font-bold"></div>
+            </div>
+        </section>
+
+        <!-- অ্যাডমিন প্যানেল -->
+        <section id="admin" class="scroll-mt-24">
+            <div class="bg-slate-900 rounded-[3rem] p-8 md:p-12 text-white">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-6">
+                    <div>
+                        <h3 class="text-2xl font-bold">অ্যাডমিন ড্যাশবোর্ড</h3>
+                        <p class="text-slate-500 text-sm">আবেদনসমূহের ব্যবস্থাপনা</p>
+                    </div>
+                    <div id="authSection" class="flex gap-2">
+                        <input type="password" id="adminKey" class="bg-slate-800 border-none p-3 rounded-xl w-32 md:w-40 outline-none focus:ring-2 focus:ring-islamic text-center" placeholder="****">
+                        <button onclick="checkAdmin()" class="bg-islamic px-6 py-3 rounded-xl font-bold btn-hover">লগইন</button>
+                    </div>
+                    <div id="panelHeader" class="hidden flex items-center gap-4">
+                        <div class="bg-slate-800 px-4 py-2 rounded-xl text-center">
+                            <span class="text-[10px] text-slate-400 block uppercase">Total</span>
+                            <span id="totalCount" class="text-xl font-bold text-yellow-400">0</span>
+                        </div>
+                        <button onclick="adminLogout()" class="text-red-400 font-bold hover:text-red-300">লগ আউট</button>
+                    </div>
+                </div>
+
+                <div id="dataPanel" class="hidden overflow-x-auto bg-slate-800/50 rounded-2xl border border-slate-700">
+                    <table class="w-full text-left text-sm">
+                        <thead>
+                            <tr class="text-slate-400 border-b border-slate-700">
+                                <th class="p-4">আবেদনকারী</th>
+                                <th class="p-4">বিভাগ ও সার্ভিস</th>
+                                <th class="p-4 text-center">অ্যাকশন</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminTableBody" class="divide-y divide-slate-700">
+                            <!-- Data -->
+                        </tbody>
+                    </table>
+                    <div id="adminLoader" class="py-10 text-center hidden"><div class="loader"></div></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t py-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-bold text-islamic mb-4">আমাদের অবস্থান</h4>
+                <p class="text-sm text-slate-500 leading-loose">
+                    চেইন্দা লাহারপাড়া, দক্ষিণ মিঠাছড়ি,<br>
+                    রামু, কক্সবাজার।<br>
+                    মোবাইল: ০১৮৯৩-৩৬৮৯০৯
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-800 mb-4">বিভাগসমূহ</h4>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li>ক্বিরাত বিভাগ (নতুন)</li>
+                    <li>আধুনিক কায়দা বিভাগ</li>
+                    <li>নাজেরা বিভাগ (শুদ্ধ তিলাওয়াত)</li>
+                    <li>হিফজুল কুরআন বিভাগ</li>
+                </ul>
+            </div>
+            <div class="flex flex-col items-start md:items-end">
+                <p class="text-xs text-slate-400 mb-4">কপিরাইট © ২০২৬ আর-রশিদ ইসলামিক ইনস্টিটিউট</p>
+                <div class="flex space-x-3 text-slate-400">
+                    <a href="tel:01893368909" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-islamic transition-all hover:bg-islamic hover:text-white"><i class="fas fa-phone-alt"></i></a>
+                    <a href="https://wa.me/8801893368909" class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-green-500 transition-all hover:bg-green-500 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase Logic -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query, deleteDoc, doc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = JSON.parse(__firebase_config);
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'arrashid-ramu-v7';
+
+        let user = null;
+        
+        const start = async () => {
+            try { await signInAnonymously(auth); } catch (e) {}
+        };
+        onAuthStateChanged(auth, u => user = u);
+        start();
+
+        const f = document.getElementById('admissionForm');
+        f.onsubmit = async (e) => {
+            e.preventDefault();
+            if(!user) return;
+
+            const btn = document.getElementById('submitBtn');
+            const ldr = document.getElementById('btnLoader');
+            const txt = document.getElementById('btnText');
+            const msg = document.getElementById('msgBox');
+
+            btn.disabled = true;
+            ldr.classList.remove('hidden');
+            txt.innerText = "প্রক্রিয়াধীন...";
+
+            const data = {
+                studentName: document.getElementById('sName').value,
+                guardian: document.getElementById('gName').value,
+                phone: document.getElementById('phone').value,
+                prevClass: document.getElementById('prevClass').value,
+                prevSchool: document.getElementById('prevSchool').value,
+                service: document.getElementById('serviceType').value,
+                dept: document.getElementById('dept').value,
+                address: document.getElementById('addr').value,
+                createdAt: serverTimestamp(),
+                displayDate: new Date().toLocaleDateString('bn-BD')
+            };
+
+            try {
+                await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'admissions'), data);
+                msg.innerHTML = "আলহামদুলিল্লাহ! আপনার আবেদন জমা হয়েছে।";
+                msg.className = "mt-4 p-4 rounded-xl text-center bg-green-100 text-green-700 block border border-green-200 animate-pulse";
+                f.reset();
+            } catch (err) {
+                msg.innerText = "দুঃখিত! নেটওয়ার্ক সমস্যা হয়েছে।";
+                msg.className = "mt-4 p-4 rounded-xl text-center bg-red-100 text-red-700 block border border-red-200";
+            } finally {
+                btn.disabled = false;
+                ldr.classList.add('hidden');
+                txt.innerText = "আবেদন জমা দিন";
+            }
+        };
+
+        window.checkAdmin = () => {
+            if(document.getElementById('adminKey').value === '1234') {
+                document.getElementById('authSection').classList.add('hidden');
+                document.getElementById('panelHeader').classList.remove('hidden');
+                document.getElementById('dataPanel').classList.remove('hidden');
+                sync();
+            } else { alert("সঠিক পাসওয়ার্ড দিন!"); }
+        };
+
+        window.adminLogout = () => location.reload();
+
+        function sync() {
+            const list = document.getElementById('adminTableBody');
+            const ldr = document.getElementById('adminLoader');
+            const cnt = document.getElementById('totalCount');
+            ldr.classList.remove('hidden');
+
+            const q = collection(db, 'artifacts', appId, 'public', 'data', 'admissions');
+            onSnapshot(q, s => {
+                list.innerHTML = '';
+                ldr.classList.add('hidden');
+                cnt.innerText = s.size;
+                s.forEach(d => {
+                    const i = d.data();
+                    const tr = document.createElement('tr');
+                    tr.className = "border-b border-slate-700 hover:bg-slate-800/50 transition-colors";
+                    tr.innerHTML = `
+                        <td class="p-4">
+                            <div class="font-bold text-white">${i.studentName}</div>
+                            <div class="text-[10px] text-slate-500">পিতা: ${i.guardian} | ${i.phone}</div>
+                        </td>
+                        <td class="p-4">
+                            <span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-md text-[10px] font-bold">${i.dept}</span><br>
+                            <span class="text-amber-400 text-[10px] font-bold">${i.service}</span>
+                        </td>
+                        <td class="p-4 text-center">
+                            <button onclick="del('${d.id}')" class="text-red-500 hover:text-red-300 p-2"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    `;
+                    list.appendChild(tr);
+                });
+            });
+        }
+
+        window.del = async (id) => {
+            if(confirm("আবেদনটি ডিলিট করতে চান?")) {
+                await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', 'admissions', id));
+            }
+        };
+
+    </script>
+</body>
+</html>
+
+```
